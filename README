@@ -1,0 +1,21 @@
+Rowan Wookey <admin@rwky.net> &copy; copyright 2011.
+LICENSE: Released under the Simplified BSD License, see the LICENSE file or http://www.opensource.org/licenses/BSD-2-Clause
+
+System Requirements
+PHP 5 or greater
+/dev/urandom if you want to use the salt function (Linux/Unix based OS)
+
+Examples of usage
+
+Generate a PBKDF2 instance and has the password mypassword using the default settings specified in the constructor of PBKDF2
+<?php
+require("rwky-pbkdf2.php");
+$pbkdf2 = new \\RWKY\\PBKDF2("mypassword");
+var_dump(base64_encode($pbkdf2->generate()));
+?>
+Will output:
+string(88) "dB8dZHOmf85O1As6aSWXdFT2h/ZwcddFyAIR89HuXyx/fpOLAwoPlaW7CPTIL+dLgEglCF4T8ogiYfhbFiANVQ=="
+
+Support
+For bug reports please visit https://github.com/rwky/rwky-php-pbkdf2/issues
+For commercial support email admin {at} rwky {dot} net
